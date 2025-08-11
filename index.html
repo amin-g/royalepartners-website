@@ -17,24 +17,24 @@
         }
     </style>
 </head>
-<body class="text-white antialiased">
+<body class="text-white bg-gray-900 antialiased">
 
-    <!-- Video Background Container -->
-    <div class="fixed inset-0 z-[-1]">
-        <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
-            <source src="./RP Website 2(2).mp4" type="video/mp4">
+    <!-- This div holds the video background and the overlay -->
+    <div class="fixed inset-0 z-0">
+        <video autoplay loop muted playsinline class="w-full h-full object-cover">
+            <source src="RP Website 2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <!-- Overlay has been removed -->
+        <div class="absolute inset-0 bg-gray-900/70"></div>
     </div>
 
-    <!-- Page Content Container -->
+    <!-- This div holds all the page content and sits on top of the background -->
     <div class="relative min-h-screen flex flex-col justify-between">
         <header class="w-full p-6 md:p-8">
             <nav class="flex justify-between items-center">
-                <!-- Increased width for a larger logo -->
-                <a href="/" class="block w-56">
-                    <img src="./Your paragraph text(1)(4).jpg" alt="Royale Partners Logo" class="w-full h-auto">
+                <!-- Set an explicit width on the link wrapping the image to make it larger -->
+                <a href="/" class="block w-48">
+                    <img src="Your paragraph text(1)(4).jpg" alt="Royale Partners Logo" class="w-full h-auto">
                 </a>
                 <div class="flex items-center space-x-4 md:space-x-6">
                     <a href="mailto:info@royalepartners.com" class="font-medium hover:text-gray-300 transition duration-300">Contact</a>
