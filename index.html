@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royale Partners | Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        .font-garamond {
+            font-family: 'EB Garamond', serif;
+        }
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -2;
+        }
+        .video-overlay {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            background-color: rgba(17, 24, 39, 0.7);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="text-white antialiased">
+
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="RP Website 2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="relative min-h-screen flex flex-col justify-between">
+        <header class="w-full p-6 md:p-8 z-10">
+            <nav class="flex justify-between items-center">
+                <a href="/">
+                    <img src="Gemini_Generated_Image_hzal0hzal0hzal0h.jpg" alt="Royale Partners Logo" class="h-16 w-auto">
+                </a>
+                <div class="flex items-center space-x-4 md:space-x-6">
+                    <a href="mailto:info@royalepartners.com" class="font-medium hover:text-gray-300 transition duration-300">Contact</a>
+                    <a href="./login.html" class="font-medium hover:text-gray-300 transition duration-300">Login</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-grow flex items-center justify-center text-center px-4 -mt-16">
+            <h1 class="font-garamond text-5xl md:text-6xl lg:text-7xl font-normal tracking-wide">
+                Royale Partners
+            </h1>
+        </main>
+
+        <footer class="w-full p-6 md:p-8 text-center">
+            <div class="max-w-3xl mx-auto mb-6">
+                 <p class="text-base font-light text-gray-300 leading-relaxed">
+                    Royale Partners is a premier educational consultancy building long-term partnerships with leading secondary schools, applying proven strategies and institutional support to advance their educational missions and enhance student outcomes.
+                </p>
+            </div>
+            <div class="text-base font-medium text-white tracking-wider space-x-4">
+                <span>Boston, MA</span>
+                <span>&bull;</span>
+                <span>Miami, FL</span>
+                <span>&bull;</span>
+                <span>New York, NY</span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
