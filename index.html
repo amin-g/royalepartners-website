@@ -15,6 +15,10 @@
         .font-garamond {
             font-family: 'EB Garamond', serif;
         }
+        /* Added a text shadow for better readability without an overlay */
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body class="text-white antialiased">
@@ -25,15 +29,13 @@
             <source src="./background-small.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <!-- Overlay -->
-        <div class="absolute inset-0" style="background-color: rgba(25, 42, 86, 0.75);"></div>
+        <!-- Overlay has been removed -->
     </div>
 
     <!-- Page Content Container -->
     <div class="relative min-h-screen flex flex-col justify-between">
 
         <header class="w-full p-4 md:p-6">
-            <!-- Changed items-center to items-start to align elements to the top -->
             <nav class="flex justify-between items-start">
                 <!-- Logo on top-left -->
                 <a href="/" class="block w-32 md:w-40 lg:w-48">
@@ -41,8 +43,7 @@
                 </a>
 
                 <!-- Navigation links -->
-                <!-- Added padding-top to align text with the visual center of the logo -->
-                <div class="flex items-center space-x-4 md:space-x-6 pt-2">
+                <div class="flex items-center space-x-4 md:space-x-6 pt-2 text-shadow">
                     <a href="mailto:info@royalepartners.com" class="font-medium hover:text-gray-300 transition duration-300">Contact</a>
                     <a href="./login.html" class="font-medium hover:text-gray-300 transition duration-300">Login</a>
                 </div>
@@ -50,12 +51,12 @@
         </header>
 
         <main class="flex-grow flex items-center justify-center text-center px-4 -mt-16">
-            <h1 class="font-garamond text-5xl md:text-6xl lg:text-7xl font-normal tracking-wide" style="color: #192a56;">
+            <h1 class="font-garamond text-5xl md:text-6xl lg:text-7xl font-normal tracking-wide text-shadow" style="color: #192a56;">
                 Royale Partners
             </h1>
         </main>
 
-        <footer class="w-full p-6 md:p-8 text-center">
+        <footer class="w-full p-6 md:p-8 text-center text-shadow">
             <div class="max-w-3xl mx-auto mb-6">
                 <p class="text-base font-light text-gray-300 leading-relaxed">
                     Royale Partners is a premier educational consultancy building long-term partnerships with leading secondary schools, applying proven strategies and institutional support to advance their educational missions and enhance student outcomes.
