@@ -25,8 +25,9 @@
 
     <!-- Video Background Container -->
     <div class="fixed inset-0 z-[-1]">
-        <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
-            <source src="./background-small.mp4" type="video/mp4">
+        <!-- Added a poster attribute and simplified the filename -->
+        <video autoplay loop muted playsinline poster="video-poster.jpg" class="absolute w-full h-full object-cover">
+            <source src="background-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <!-- Overlay has been removed -->
@@ -36,10 +37,11 @@
     <div class="relative min-h-screen flex flex-col justify-between">
 
         <header class="w-full p-4 md:p-6">
-            <nav class="flex justify-between items-start">
+            <nav class="flex justify-between items-center">
                 <!-- Logo on top-left -->
                 <a href="/" class="block w-32 md:w-40 lg:w-48">
-                    <img src="./rp-logo.png" alt="Royale Partners Logo" class="w-full h-auto">
+                    <!-- Simplified the filename -->
+                    <img src="logo.png" alt="Royale Partners Logo" class="w-full h-auto">
                 </a>
 
                 <!-- Navigation links -->
