@@ -15,6 +15,16 @@
         .font-garamond {
             font-family: 'EB Garamond', serif;
         }
+        .video-overlay {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            /* A warmer, sophisticated dark brown overlay */
+            background-color: rgba(44, 28, 28, 0.75);
+            z-index: -1;
+        }
     </style>
 </head>
 <body class="text-white bg-gray-900 antialiased">
@@ -25,15 +35,15 @@
             <source src="RP Website 2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="absolute inset-0 bg-gray-900/70"></div>
+        <div class="video-overlay"></div>
     </div>
 
     <!-- This div holds all the page content and sits on top of the background -->
     <div class="relative min-h-screen flex flex-col justify-between">
         <header class="w-full p-6 md:p-8">
             <nav class="flex justify-between items-center">
-                <!-- Set an explicit width on the link wrapping the image to make it larger -->
-                <a href="/" class="block w-48">
+                <!-- Increased width for a larger logo -->
+                <a href="/" class="block w-64">
                     <img src="Your paragraph text(1)(4).jpg" alt="Royale Partners Logo" class="w-full h-auto">
                 </a>
                 <div class="flex items-center space-x-4 md:space-x-6">
