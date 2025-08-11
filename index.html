@@ -15,35 +15,26 @@
         .font-garamond {
             font-family: 'EB Garamond', serif;
         }
-        .video-overlay {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%; 
-            min-height: 100%;
-            /* A warmer, sophisticated dark brown overlay */
-            background-color: rgba(44, 28, 28, 0.75);
-            z-index: -1;
-        }
     </style>
 </head>
-<body class="text-white bg-gray-900 antialiased">
+<body class="text-white antialiased">
 
-    <!-- This div holds the video background and the overlay -->
-    <div class="fixed inset-0 z-0">
-        <video autoplay loop muted playsinline class="w-full h-full object-cover">
+    <!-- Video Background Container -->
+    <div class="fixed inset-0 z-[-1]">
+        <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
             <source src="RP Website 2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="video-overlay"></div>
+        <!-- Overlay -->
+        <div class="absolute inset-0" style="background-color: rgba(44, 28, 28, 0.75);"></div>
     </div>
 
-    <!-- This div holds all the page content and sits on top of the background -->
+    <!-- Page Content Container -->
     <div class="relative min-h-screen flex flex-col justify-between">
         <header class="w-full p-6 md:p-8">
             <nav class="flex justify-between items-center">
                 <!-- Increased width for a larger logo -->
-                <a href="/" class="block w-64">
+                <a href="/" class="block w-56">
                     <img src="Your paragraph text(1)(4).jpg" alt="Royale Partners Logo" class="w-full h-auto">
                 </a>
                 <div class="flex items-center space-x-4 md:space-x-6">
