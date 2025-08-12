@@ -57,22 +57,36 @@
         </main>
 
         <footer class="w-full p-6 md:p-8 text-shadow-soft">
-            <!-- Footer container: stacks vertically on mobile, horizontally on desktop -->
-            <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
-                <!-- Cities: takes full width on mobile, 1/3 on desktop -->
-                <div class="w-full md:w-1/3 text-center md:text-left">
-                    <div class="text-base font-medium tracking-wider space-y-1" style="color: #192a56;">
-                        <span>Boston, MA</span><br>
-                        <span>Miami, FL</span><br>
-                        <span>New York, NY</span>
+            <!-- On mobile, this reverses the column order, putting the mission statement on top -->
+            <div class="max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-4">
+                
+                <!-- Cities container -->
+                <div class="w-full md:w-auto text-center md:text-left">
+                    <div class="text-base font-medium tracking-wider" style="color: #192a56;">
+                        <!-- Mobile-only horizontal layout -->
+                        <div class="flex flex-row justify-center items-center space-x-4 md:hidden">
+                            <span>Boston, MA</span>
+                            <span>&bull;</span>
+                            <span>Miami, FL</span>
+                            <span>&bull;</span>
+                            <span>New York, NY</span>
+                        </div>
+                        <!-- Desktop-only vertical layout -->
+                        <div class="hidden md:block space-y-1">
+                            <span>Boston, MA</span><br>
+                            <span>Miami, FL</span><br>
+                            <span>New York, NY</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Mission Statement: takes full width on mobile, 2/3 on desktop -->
-                <div class="w-full md:w-2/3 max-w-2xl text-center">
+
+                <!-- Mission Statement container -->
+                <div class="w-full md:w-auto max-w-2xl text-center">
                     <p class="text-lg font-light leading-relaxed" style="color: #9D2E37;">
                         Royale Partners is a premier educational consultancy building long-term partnerships with leading secondary schools, applying proven strategies and institutional support to advance their educational missions and enhance student outcomes.
                     </p>
                 </div>
+
             </div>
         </footer>
     </div>
