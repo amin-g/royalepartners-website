@@ -11,60 +11,91 @@
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            background-color: #111827;
         }
         .font-garamond {
             font-family: 'EB Garamond', serif;
         }
+        .text-shadow-soft {
+            text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+        .background-image {
+            background-image: url('./background-clear.png');
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+        }
     </style>
 </head>
-<body class="text-white antialiased">
+<body class="antialiased" style="color: #F5F5F5;">
 
-    <div class="relative min-h-screen flex flex-col">
-        <header class="absolute top-0 left-0 right-0 p-6 md:p-8 z-10">
+    <!-- Blurred Background Image Container -->
+    <div class="fixed inset-0 z-0 background-image bg-cover bg-center"></div>
+    <div class="fixed inset-0 z-0 bg-black/30"></div>
+
+
+    <!-- Page Content Container -->
+    <div class="relative min-h-screen flex flex-col justify-between z-10">
+
+        <header class="w-full p-4 md:p-6">
             <nav class="flex justify-between items-center">
-                <a href="./index.html">
-                    <img src="Gemini_Generated_Image_hzal0hzal0hzal0h.jpg" alt="Royale Partners Logo" class="h-16 w-auto">
+                <!-- Logo and Title on the left -->
+                <a href="/" class="flex items-center space-x-4">
+                    <img src="./rp-logo-tree.png" alt="Royale Partners Tree Logo" class="h-10 w-auto">
+                    <h1 class="font-garamond text-4xl font-normal text-shadow-soft">Royale Partners</h1>
                 </a>
+
+                <!-- Right Navigation Links -->
                 <div class="flex items-center space-x-4 md:space-x-6">
-                    <a href="mailto:info@royalepartners.com" class="font-medium hover:text-gray-300 transition duration-300">Contact</a>
+                    <a href="mailto:info@royalepartners.com" class="font-medium transition duration-300 text-shadow-soft hover:text-gray-300">Contact</a>
                 </div>
             </nav>
         </header>
 
+        <!-- Login Form -->
         <main class="flex-grow flex items-center justify-center px-4">
             <div class="w-full max-w-sm">
-                <div class="bg-gray-900/50 backdrop-blur-sm shadow-2xl rounded-2xl px-8 pt-6 pb-8 mb-4 border border-gray-700">
+                <div class="bg-black/20 backdrop-blur-sm shadow-2xl rounded-2xl px-8 pt-6 pb-8 mb-4 border border-white/10">
                     <div class="mb-8 text-center">
-                        <h1 class="text-3xl font-bold text-white">Login</h1>
-                        <p class="text-gray-400 mt-2">Access your client portal.</p>
+                        <h1 class="text-3xl font-bold text-white text-shadow-soft">Login</h1>
+                        <p class="text-gray-300 mt-2 text-shadow-soft">Access your client portal.</p>
                     </div>
                     <form onsubmit="return false;">
                         <div class="mb-4">
-                            <label class="block text-gray-400 text-sm font-bold mb-2" for="email">Email</label>
-                            <input class="bg-gray-800 border border-gray-700 rounded-lg w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-white/50" id="email" type="email" placeholder="you@example.com">
+                            <label class="block text-gray-300 text-sm font-bold mb-2 text-shadow-soft" for="email">
+                                Email
+                            </label>
+                            <input class="bg-black/30 border border-white/20 rounded-lg w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-white/50" id="email" type="email" placeholder="you@example.com">
                         </div>
                         <div class="mb-6">
-                            <label class="block text-gray-400 text-sm font-bold mb-2" for="password">Password</label>
-                            <input class="bg-gray-800 border border-gray-700 rounded-lg w-full py-3 px-4 text-white mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50" id="password" type="password" placeholder="******************">
+                            <label class="block text-gray-300 text-sm font-bold mb-2 text-shadow-soft" for="password">
+                                Password
+                            </label>
+                            <input class="bg-black/30 border border-white/20 rounded-lg w-full py-3 px-4 text-white mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-white/50" id="password" type="password" placeholder="******************">
                         </div>
                         <div class="flex items-center justify-between">
-                            <button class="w-full bg-white hover:bg-gray-200 text-gray-900 font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-300" type="button">Sign In</button>
+                            <button class="w-full bg-white/90 hover:bg-white text-gray-900 font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-300" type="button">
+                                Sign In
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
         </main>
 
-        <footer class="absolute bottom-0 left-0 p-6 md:p-8">
+        <footer class="w-full p-6 md:p-8 flex justify-between items-end text-shadow-soft">
+             <!-- Cities on the bottom left -->
             <div class="text-left">
-                <div class="text-sm font-light text-gray-400">
-                    <p>Boston, MA</p>
-                    <p>Miami, FL</p>
-                    <p>New York, NY</p>
+                <div class="text-base font-medium tracking-wider space-y-1">
+                    <span>New York, NY</span><br>
+                    <span>Miami, FL</span><br>
+                    <span>Boston, MA</span>
                 </div>
             </div>
+            <!-- Right Spacer -->
+            <div class="w-56">
+                <!-- This space is intentionally left empty to balance the layout -->
+            </div>
         </footer>
+
     </div>
 
 </body>
