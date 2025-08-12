@@ -54,8 +54,10 @@
         <!-- Login Form -->
         <main class="flex-grow flex items-center justify-center px-4">
             <div class="w-full max-w-sm">
-                <div class="bg-black/20 backdrop-blur-sm shadow-2xl rounded-2xl px-6 py-8 md:px-8 border border-white/10">
-                    <div class="mb-6 md:mb-8 text-center">
+                <!-- Reduced vertical padding on mobile (py-6) -->
+                <div class="bg-black/20 backdrop-blur-sm shadow-2xl rounded-2xl px-6 py-6 md:px-8 md:py-8 border border-white/10">
+                    <!-- Reduced margin-bottom on mobile (mb-6) -->
+                    <div class="mb-6 text-center">
                         <h1 class="text-3xl font-bold text-white text-shadow-soft">Login</h1>
                         <p class="text-gray-300 mt-2 text-shadow-soft">Access your client portal.</p>
                     </div>
@@ -82,7 +84,7 @@
             </div>
         </main>
 
-        <footer class="w-full p-4 text-shadow-soft">
+        <footer class="w-full p-3 md:p-4 text-shadow-soft">
             <div class="max-w-screen-xl mx-auto">
                 <div class="text-xs md:text-base font-medium tracking-wider text-center">
                     <!-- This layout works for all screen sizes without causing overflow -->
