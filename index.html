@@ -52,11 +52,13 @@
         </header>
 
         <!-- Main content is now empty, serving as a spacer -->
-        <main class="flex-grow">
+        <!-- Added padding-bottom to prevent content from being hidden by the fixed footer on mobile -->
+        <main class="flex-grow pb-32 md:pb-0">
         </main>
 
-        <footer class="w-full p-4 md:p-8 text-shadow-soft">
-            <!-- Footer container: stacks vertically on mobile, horizontally on desktop -->
+        <!-- Footer content now in a div that is fixed on mobile -->
+        <div class="fixed bottom-0 left-0 right-0 w-full p-4 text-shadow-soft md:relative md:p-8">
+            <!-- Container for mobile stacking and desktop layout -->
             <div class="max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-4 md:gap-4">
                 
                 <!-- Cities container -->
@@ -87,7 +89,7 @@
                 </div>
 
             </div>
-        </footer>
+        </div>
     </div>
 
 </body>
