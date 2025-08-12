@@ -34,7 +34,7 @@
 
 
     <!-- Page Content Container -->
-    <div class="relative min-h-screen flex flex-col justify-between z-10">
+    <div class="relative min-h-screen flex flex-col z-10">
 
         <header class="w-full p-4 md:p-6">
             <nav class="flex justify-between items-center">
@@ -52,12 +52,11 @@
         </header>
 
         <!-- Login Form -->
-        <main class="flex-grow flex items-center justify-center px-4">
+        <!-- Added padding-bottom to prevent overlap with the fixed footer on mobile -->
+        <main class="flex-grow flex items-center justify-center px-4 pb-20 md:pb-0">
             <div class="w-full max-w-sm">
-                <!-- Further reduced vertical padding on mobile (py-4) -->
-                <div class="bg-black/20 backdrop-blur-sm shadow-2xl rounded-2xl px-6 py-4 md:px-8 md:py-8 border border-white/10">
-                    <!-- Further reduced margin-bottom on mobile (mb-4) -->
-                    <div class="mb-4 text-center">
+                <div class="bg-black/20 backdrop-blur-sm shadow-2xl rounded-2xl px-6 py-6 md:px-8 md:py-8 border border-white/10">
+                    <div class="mb-6 text-center">
                         <h1 class="text-3xl font-bold text-white text-shadow-soft">Login</h1>
                         <p class="text-gray-300 mt-2 text-shadow-soft">Access your client portal.</p>
                     </div>
@@ -84,10 +83,10 @@
             </div>
         </main>
 
-        <footer class="w-full p-2 md:p-4 text-shadow-soft">
+        <!-- Footer is now fixed on mobile and part of the flow on desktop -->
+        <div class="fixed bottom-0 left-0 right-0 w-full p-4 text-shadow-soft md:relative">
             <div class="max-w-screen-xl mx-auto">
                 <div class="text-xs md:text-base font-medium tracking-wider text-center">
-                    <!-- This layout works for all screen sizes without causing overflow -->
                     <div class="flex flex-wrap justify-center items-center gap-x-3 md:gap-x-4">
                         <span>New York, NY</span>
                         <span class="text-gray-400">&bull;</span>
@@ -97,7 +96,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
 
     </div>
 
