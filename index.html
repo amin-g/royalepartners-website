@@ -12,8 +12,13 @@
         body {
             font-family: 'Lato', sans-serif;
         }
-        body::-webkit-scrollbar {
-            display: none;
+        /* More robust scrollbar hiding for all browsers */
+        ::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+        html {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
         }
         .font-garamond {
             font-family: 'EB Garamond', serif;
@@ -28,8 +33,8 @@
     <!-- Video Background Container -->
     <div class="fixed inset-0 z-0">
         <video autoplay loop muted playsinline poster="./background-clear.png" class="absolute w-full h-full object-cover">
-            <source src="./background-clear.webm" type="video/webm">
-            <source src="./background-clear.mp4" type="video/mp4">
+            <source src="./rp-website-clear.webm" type="video/webm">
+            <source src="./rp-website-clear.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="absolute inset-0 bg-black/30"></div>
