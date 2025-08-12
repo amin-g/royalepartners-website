@@ -15,21 +15,24 @@
         .font-garamond {
             font-family: 'EB Garamond', serif;
         }
-        .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        /* A softer, more professional text shadow */
+        .text-shadow-soft {
+            text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
-<body class="text-white antialiased">
+<body class="antialiased" style="color: #F5F5F5;">
 
     <!-- Video Background Container -->
     <div class="fixed inset-0 z-0">
         <video autoplay loop muted playsinline poster="./background-clear.png" class="absolute w-full h-full object-cover">
-            <source src="./background-clear.mp4" type="video/mp4">
-            <source src="./background-clear.webm" type="video/webm">
+            <!-- Using simple, web-safe filenames -->
+            <source src="./background-video.webm" type="video/webm">
+            <source src="./background-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <!-- Overlay has been removed -->
+        <!-- A very subtle dark overlay to guarantee readability -->
+        <div class="absolute inset-0 bg-black/20"></div>
     </div>
 
     <!-- Page Content Container - z-index ensures it sits on top of the background -->
@@ -39,14 +42,15 @@
             <nav class="flex justify-between items-center">
                 <!-- Logo and Title on the left -->
                 <a href="/" class="flex items-center space-x-4">
-                    <img src="rp-logo-tree.png" alt="Royale Partners Tree Logo" class="h-10 w-auto">
-                    <h1 class="font-garamond text-4xl font-normal" style="color: #192a56;">Royale Partners</h1>
+                    <!-- Using simple, web-safe filename -->
+                    <img src="./logo.png" alt="Royale Partners Tree Logo" class="h-10 w-auto">
+                    <h1 class="font-garamond text-4xl font-normal text-shadow-soft" style="color: #192a56;">Royale Partners</h1>
                 </a>
 
                 <!-- Right Navigation Links -->
                 <div class="flex items-center space-x-4 md:space-x-6">
-                    <a href="mailto:info@royalepartners.com" class="font-medium transition duration-300" style="color: #192a56;">Contact</a>
-                    <a href="./login.html" class="font-medium transition duration-300" style="color: #192a56;">Login</a>
+                    <a href="mailto:info@royalepartners.com" class="font-medium transition duration-300 text-shadow-soft" style="color: #9D2E37;">Contact</a>
+                    <a href="./login.html" class="font-medium transition duration-300 text-shadow-soft" style="color: #D95843;">Login</a>
                 </div>
             </nav>
         </header>
@@ -55,7 +59,7 @@
         <main class="flex-grow">
         </main>
 
-        <footer class="w-full p-6 md:p-8 flex justify-between items-end text-shadow">
+        <footer class="w-full p-6 md:p-8 flex justify-between items-end text-shadow-soft">
              <!-- Cities on the bottom left -->
             <div class="text-left">
                 <div class="text-base font-medium tracking-wider space-y-1" style="color: #192a56;">
