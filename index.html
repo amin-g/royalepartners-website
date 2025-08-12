@@ -24,9 +24,8 @@
 
     <!-- Video Background Container -->
     <div class="fixed inset-0 z-0">
-        <video autoplay loop muted playsinline poster="./background-clear.png" class="absolute w-full h-full object-cover">
-            <source src="./rp-website-clear.webm" type="video/webm">
-            <source src="./rp-website-clear.mp4" type="video/mp4">
+        <video autoplay loop muted playsinline poster="video-poster.jpg" class="absolute w-full h-full object-cover">
+            <source src="background-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <!-- Overlay has been removed -->
@@ -39,14 +38,14 @@
             <nav class="flex justify-between items-center">
                 <!-- Logo and Title on the left -->
                 <a href="/" class="flex items-center space-x-4">
-                    <img src="./rp-logo-tree.png" alt="Royale Partners Tree Logo" class="h-10 w-auto">
-                    <h1 class="font-garamond text-4xl font-normal" style="color: #D95843;">Royale Partners</h1>
+                    <img src="rp-logo copy.jpg" alt="Royale Partners Tree Logo" class="h-10 w-auto">
+                    <h1 class="font-garamond text-4xl font-normal" style="color: #192a56;">Royale Partners</h1>
                 </a>
 
                 <!-- Right Navigation Links -->
                 <div class="flex items-center space-x-4 md:space-x-6">
-                    <a href="mailto:info@royalepartners.com" class="font-medium transition duration-300" style="color: #9D2E37;">Contact</a>
-                    <a href="./login.html" class="font-medium transition duration-300" style="color: #D95843;">Login</a>
+                    <a href="mailto:info@royalepartners.com" class="font-medium transition duration-300" style="color: #192a56;">Contact</a>
+                    <a href="./login.html" class="font-medium transition duration-300" style="color: #192a56;">Login</a>
                 </div>
             </nav>
         </header>
@@ -55,18 +54,24 @@
         <main class="flex-grow">
         </main>
 
-        <footer class="w-full p-6 md:p-8 text-center text-shadow">
-            <div class="max-w-3xl mx-auto mb-6">
-                <p class="text-base text-shadow-sm font-normal text-gray-900 leading-relaxed">
+        <footer class="w-full p-6 md:p-8 flex justify-between items-end text-shadow">
+             <!-- Cities on the bottom left -->
+            <div class="text-left">
+                <div class="text-base font-medium tracking-wider space-y-1" style="color: #192a56;">
+                    <span>Boston, MA</span><br>
+                    <span>Miami, FL</span><br>
+                    <span>New York, NY</span>
+                </div>
+            </div>
+            <!-- Mission statement centered -->
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg font-light leading-relaxed" style="color: #9D2E37;">
                     Royale Partners is a premier educational consultancy building long-term partnerships with leading secondary schools, applying proven strategies and institutional support to advance their educational missions and enhance student outcomes.
                 </p>
             </div>
-        </footer>
-        <footer class="w-full p-6 md:p-8 text-left text-shadow">
-            <div class="text-base font-medium text-white tracking-wider space-y-4">
-                <span>Boston, MA</span>
-                <span>Miami, FL</span>
-                <span>New York, NY</span>
+             <!-- Right Spacer -->
+            <div class="w-56">
+                <!-- This space is intentionally left empty to balance the layout -->
             </div>
         </footer>
 
