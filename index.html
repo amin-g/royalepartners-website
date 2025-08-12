@@ -35,7 +35,8 @@
     <!-- Page Content Container -->
     <div class="relative min-h-screen flex flex-col justify-between z-10">
 
-        <header class="w-full p-4 md:p-6">
+        <!-- Header is now fixed on mobile and relative on desktop -->
+        <header class="fixed top-0 left-0 right-0 w-full p-4 md:p-6 md:relative z-20 bg-transparent">
             <nav class="flex justify-between items-center">
                 <!-- Logo and Title on the left -->
                 <a href="/" class="flex items-center space-x-2 md:space-x-4">
@@ -51,9 +52,8 @@
             </nav>
         </header>
 
-        <!-- Main content is now empty, serving as a spacer -->
-        <!-- Added padding-bottom to prevent content from being hidden by the fixed footer on mobile -->
-        <main class="flex-grow pb-32 md:pb-0">
+        <!-- Main content has padding-top on mobile to avoid being hidden by the fixed header -->
+        <main class="flex-grow pt-20 md:pt-0 pb-32 md:pb-0">
         </main>
 
         <!-- Footer content now in a div that is fixed on mobile -->
